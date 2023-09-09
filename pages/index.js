@@ -11,17 +11,19 @@ const Home = ({products, bannerData}) => {
         <div className='products-heading'>
           <h2>Best selling products</h2>
           <p>Speakers</p>
-          <div className='producs-container'>
+          <div className='products-container'>
            {products?.map(
-            (product)=>product.name)}
+            // passing product id product as props to Product component
+            (product)=><Product key ={product._id} product ={product}/>)} 
           </div>
         </div>
 
-        <FooterBanner/>
+        <FooterBanner FooterBanner ={bannerData && bannerData[0]}/>
     </>
   )
 }
 
+//runs at request time. Runs only on server side and page is prerendered with returned props
 
 export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';
