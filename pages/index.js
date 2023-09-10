@@ -10,7 +10,7 @@ const Home = ({products, bannerData}) => {
         <HeroBanner heroBanner = {bannerData.length&& bannerData[0]}/>
         <div className='products-heading'>
           <h2>Best selling products</h2>
-          <p>Speakers</p>
+          <p>Tech Products</p>
           <div className='products-container'>
            {products?.map(
             // passing product id product as props to Product component
