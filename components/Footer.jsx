@@ -1,13 +1,14 @@
 import React from 'react';
-import { AiFillInstagram, AiOutlineTwitter} from 'react-icons/ai';
+import { AiFillGithub} from 'react-icons/ai';
 
 const Footer = () => {
   return (
     <div className="footer-container">
-      <p>2023 Salzea</p>
+      <p>Made by Rishabh</p>
       <p className="icons">
-        <AiFillInstagram />
-        <AiOutlineTwitter />
+      <Link href="https://github.com/Rishabh-Agarwal9/saleza" target="_blank" rel="noopener noreferrer">
+        <AiFillGithub />
+      </Link>
       </p>
     </div>
   )
